@@ -1,7 +1,6 @@
 const APIKEY = 'AIzaSyCGt6hDWBgYbjPW9h_jdA7i9c6iHsjiLYA';
 const youtubeAPI = 'https://www.googleapis.com/youtube/v3/search?key='; // The "/search" is what specifies that I want to search for a video
 
-
 $('#search-btn').on("click", function (event) { 
     event.preventDefault();
     searchTerm = $("#searchInput").val();
@@ -23,9 +22,6 @@ var getYoutTube = function () {
             console.log(error);
         });
 };
-
-
-
 
 var getWikiInfo = function () {
     var wikiURL = 'https://en.wikipedia.org/w/rest.php/v1/search/page?q=' + searchTerm + '&limit=1';
