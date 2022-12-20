@@ -1,38 +1,32 @@
+const APIKEY = 'AIzaSyCGt6hDWBgYbjPW9h_jdA7i9c6iHsjiLYA';
+const youtubeAPI = 'https://www.googleapis.com/youtube/v3/search?key='; // The "/search" is what specifies that I want to search for a video
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var wikiData;
-$('.btn').on("click", function (event) { 
+$('#search-btn').on("click", function (event) { 
     event.preventDefault();
     searchTerm = $("#searchInput").val();
     // console.log(searchTerm);
     getWikiInfo();
+    getYoutTube();
 });
 
 
-//var wikiURL = 'https://en.wikipedia.org/w/rest.php/v1/page/Pet_door';
-//var wikiURL = "https://en.wikipedia.org/api/rest_v1/page/mobile-html/Pet_door";
+var getYoutTube = function () {
+    let searchYouTube = youtubeAPI + APIKEY +'&part=snippet&type=video&q=' + searchTerm;
+    fetch(searchYouTube)
+        .then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            console.log(data);
+            console.log(data.items[0].id.videoId);
+        }).catch(function (error) {
+            console.log(error);
+        });
+};
+
+
+
+
 var getWikiInfo = function () {
     var wikiURL = 'https://en.wikipedia.org/w/rest.php/v1/search/page?q=' + searchTerm + '&limit=1';
     fetch(wikiURL)
