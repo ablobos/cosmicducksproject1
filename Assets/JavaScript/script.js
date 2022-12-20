@@ -6,11 +6,11 @@ $('#search-btn').on("click", function (event) {
     searchTerm = $("#searchInput").val();
     // console.log(searchTerm);
     getWikiInfo();
-    getYoutTube();
+    getYouTube();
 });
 
 
-var getYoutTube = function () {
+var getYouTube = function () {
     let searchYouTube = youtubeAPI + APIKEY +'&part=snippet&type=video&q=' + searchTerm;
     fetch(searchYouTube)
         .then(function (response) {
