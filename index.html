@@ -4,18 +4,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
     <link rel="stylesheet" href="./Assets/CSS/style.css">
     <title>The Curious Amateur</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+    <style>
+      .center {
+        display: block;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
 </head>
-<body>
-    <div id = "search-box">
-        <h3>Search for a topic you'd like to learn about: </h3>
-        <br>
-        <br>
-        <div>
-          <input id = "searchInput" type="text"  placeholder="Search" label="Search term">
-          <button type="submit" class="btn">Submit</button>
+<body> 
+<section class="hero is-small has-background-black">
+	<div class="hero-body">
+    <div class="container1">
+      <figure class="image is-128x128">
+        <img class= "hero-logo is-rounded" src="./Assets/Images/dazedduck.gif">
+        <h1 class="team">The Cosmic Ducks Presents:</h1>     
+      </figure>
+      </div>
+    </div>
+</section>
+      <section class="section ">
+          <div class="container2">
+             <div class="columns">
+                <div class="column">
+                    <div class="notification is-grey-darker">
+                      <h2 class="title"></h2>
+                      <p class="is-size-4">
+                     Quick Search:
+                     <div class="field has-addons">
+                      <div class="control">
+                        <input class="input" type="text" placeholder="enter your keywords">
+                      </div>
+                      <div class="control">
+                        <a class="button is-info">
+                          Search
+                        </a>
+                      </div>
+                    </div>
+                  </p>
+                    </div>
+                  </div>
+                  <div class="column">
+                      <div class="notification is-primary">
+                        <p class="is-size-2-">
+                          YouTube Summons You
+                          <figure class="image is-16by9">
+                            <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/YE7VzlLtp-4" frameborder="0" allowfullscreen></iframe>
+                          </figure>
+                      </div>
+                    </div>
+                  <div class="column">                    
+                    <div class="notification is-info">
+                      <p class="is-size-2">
+                      Wikipedia Info Box
+                      <div class="card">
+                        <div class="card-content">
+                          <p class="title">
+                            “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
+                          </p>
+                          <p class="subtitle">
+                            Jeff Atwood
+                          </p>
+                        </div>
+                        <footer class="card-footer">
+                          <p class="card-footer-item">
+                            <span>
+                              View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
+                            </span>
+                          </p>
+                          <p class="card-footer-item">
+                            <span>
+                              Share on <a href="#">Facebook</a>
+                            </span>
+                          </p>
+                        </footer>
+                  </div>
+                  </div>
+                </div>
+	          </div>
+</section>
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./Assets/JavaScript/script.js"></script>
 </body>
-</html>
+</html> 

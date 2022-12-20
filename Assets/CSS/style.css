@@ -1,0 +1,15 @@
+.hero {
+    background-image: url('../Images/financialgraph.jpg');
+    background-repeat: no-repeat;
+    
+}
+.team {
+text-align: center;
+display: inline-flex;
+color: rgb(243, 74, 235);
+background-color: rgb(12, 11, 11);
+border-radius: 10px;
+border: 3px solid whitesmoke;
+padding: 3px;
+margin: 2px;
+}
