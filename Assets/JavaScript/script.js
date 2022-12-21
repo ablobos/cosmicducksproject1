@@ -11,6 +11,7 @@ $('#search-btn').on("click", function (event) {
     getWikiInfo();
     getYouTube();
     storePastSearches(searchTerm);
+    displayPastSearches();
 });
 
 
@@ -82,5 +83,39 @@ var storePastSearches = function (searchTerm) {
         localStorage.setItem("pastSearches", JSON.stringify(searchTerm));
     }
 }
+var displayPastSearches = function () {
+    storedSearches = JSON.parse(localStorage.getItem("pastSearches"));
+    if (storedSearches !== null) {
+        //if there is existing search history, we first remove each of the history buttons already displayed on the page
+        //so that we do not have duplicate buttons when we do a new search and update the buttons to the most recent searches
+        var oldBtns = $(".history-btns");
+        for (i=0; i < oldBtns.length; i++) {
+            oldBtns.remove();
+        }
+
+        for (i=0; i < storedSearches.length; i++) {
+            var histbtn = document.createElement("button");
+            histbtn.type = "submit";
+            histbtn.name = "search-history-btn";
+            histbtn.innerHTML = storedSearches[i];
+            histbtn.setAttribute("class", "history-btns");
+            histbtn.setAttribute("id", `hist-btn-${[i]}`);
+            $("#search-history-box").append(histbtn);
+        }
+    }
 
 
+    //this event listener looks for when one of the search history buttons was clicked, and identifies the text of that button
+    $(".history-btns").on("click", function (event) {
+        event.preventDefault();
+        //we set the current searchTerm equal to whatever city name was clicked on in our search history
+        searchTerm = this.innerHTML;
+        //then we can do the process of running another search for that term
+        getWikiInfo();
+        getYouTube();
+    });
+}
+//calling this function again outside of the other functions makes sure the past searches 
+//are displayed as buttons even when the page first opens or is refreshed, 
+//not only when we trigger the updated display with a new search
+displayPastSearches();
