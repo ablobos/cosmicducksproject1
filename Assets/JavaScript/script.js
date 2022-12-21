@@ -41,37 +41,32 @@ var getWikiInfo = function () {
 };
 
 var putWikiOnPage = function (data) {
-    // if (wikiTitle !== null ) {
-    // wikiTitle.remove();
-    // wikiIcon.remove();
-    // wikiDescr.remove();
-    // wikiExcerpt.remove();
-    // articleURL.remove();
-    // }
-    //this adds in the title of the wiki page as an html element on the page
-    var wikiTitle = document.createElement("div");
-    wikiTitle.innerHTML= '<h3>' + data.title + '</h3>';
-    document.body.appendChild(wikiTitle);
+  
+    //this adds in the title of the wiki page into the html
+    var wikiTitle = document.querySelector("#wiki-title");
+    wikiTitle.innerHTML= data.title;
     //this adds in the page's icon as an html element on the page
     //some of the articles do not have a thumbnail image, so if the thumbnail is null we don't create an element for it
     //TODO: figure out how to make icon bigger?
     if (data.thumbnail !== null) {
-    var wikiIcon = document.createElement("img");
+    var wikiIcon = document.querySelector("#wiki-icon");
     wikiIcon.setAttribute("src", "https:" + data.thumbnail.url);
-    document.body.appendChild(wikiIcon); }
+    } else {
+    var wikiIcon = document.querySelector("#wiki-icon");
+    wikiIcon.setAttribute("src", "./Assets/Images/lightbulb-icon.png" );
+    }
     //adds article description to page
-    var wikiDescr = document.createElement("div");
-    wikiDescr.innerHTML = '<p>' + data.description + '</p.>';
-    document.body.appendChild(wikiDescr);
+    var wikiDescr = document.querySelector("#wiki-description");
+    wikiDescr.innerHTML = data.description;
     //adds brief summary/excerpt to page
-    var wikiExcerpt = document.createElement("div");
-    wikiExcerpt.innerHTML = '<p>' + data.excerpt + ' ... </p>';
-    document.body.appendChild(wikiExcerpt);
-    //
-    var articleURL = document.createElement("a");
+    var wikiExcerpt = document.querySelector("#wiki-excerpt");
+    wikiExcerpt.innerHTML = data.excerpt + ' ... ';
+
+    //adds wikipedia article's url
+    var articleURL = document.querySelector("#wiki-link");
     articleURL.setAttribute("href", 'https://en.wikipedia.org/?curid=' + data.id);
     articleURL.innerHTML = 'https://en.wikipedia.org/?curid=' + data.id;
-    document.body.appendChild(articleURL);
+    
 
 }
 
