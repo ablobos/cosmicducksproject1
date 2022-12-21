@@ -1,6 +1,7 @@
 const APIKEY = 'AIzaSyCGt6hDWBgYbjPW9h_jdA7i9c6iHsjiLYA';
 const youtubeAPI = 'https://www.googleapis.com/youtube/v3/search?key='; // The "/search" is what specifies that I want to search for a video
 let videoID = "PUT YOUTUBE VIDEO ID HERE";
+var storedSearches = [];
 
 
 $('#search-btn').on("click", function (event) { 
@@ -9,8 +10,8 @@ $('#search-btn').on("click", function (event) {
     // console.log(searchTerm);
     getWikiInfo();
     getYouTube();
+    storePastSearches(searchTerm);
 });
-
 
 
 var getYouTube = function () {
@@ -68,6 +69,18 @@ var putWikiOnPage = function (data) {
     articleURL.innerHTML = 'https://en.wikipedia.org/?curid=' + data.id;
     
 
+}
+
+//this function stores the current searchTerm in an array of storedSearches, and sets storedSearches up in local storage so that past searches are saved in the user's browser
+var storePastSearches = function (searchTerm) {
+    storedSearches = JSON.parse(localStorage.getItem("pastSearches"));
+    if (storedSearches !== null) {
+    storedSearches.push(searchTerm);
+    localStorage.setItem("pastSearches", JSON.stringify(storedSearches));
+    } else {
+        searchTerm = [searchTerm];
+        localStorage.setItem("pastSearches", JSON.stringify(searchTerm));
+    }
 }
 
 
