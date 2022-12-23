@@ -13,3 +13,7 @@ border: 3px solid whitesmoke;
 padding: 3px;
 margin: 2px;
 }
+#wiki-icon {
+    height: auto;
+    max-width: 85px;
+}
