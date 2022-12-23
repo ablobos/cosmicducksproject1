@@ -17,7 +17,7 @@ $('#search-btn').on("click", function (event) {
 
 
 var getYouTube = function () {
-    let searchYouTube = youtubeAPI + APIKEY +'&part=snippet&type=video&q=' + searchTerm;
+    let searchYouTube = youtubeAPI + APIKEY +'&part=snippet&videoCategoryId=27&type=video&q=' + searchTerm;
     fetch(searchYouTube)
         .then(function (response) {
             return response.json();
