@@ -35,7 +35,7 @@ function displayVideos(data) {
     for (let i = 0; i < data.items.length; i++) {
         const videoIDLoop = data.items[i].id.videoId;
         console.log(videoIDLoop);
-        youtubeDisplay.innerHTML += `<iframe width="420" height="345" class="" src="https://www.youtube.com/embed/${videoIDLoop}"></iframe>`;
+        youtubeDisplay.innerHTML += `<iframe width="480" height="345" class="" src="https://www.youtube.com/embed/${videoIDLoop}"></iframe>`;
     }
 }
 

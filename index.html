@@ -19,11 +19,15 @@
 </head>
 <body> 
 <section class="hero is-small has-background-black">
+  <img class="galaxy" src="./Assets/Images/starfall-gif.gif">
 	<div class="hero-body">
     <div class="container1">
       <figure id="banner" class="image is-128x128">
-        <h1 class="team">The Cosmic Ducks Presents:</h1> 
+        <h1 class="team">The Cosmic Ducks Presents:</h1>
         <img class= "hero-logo is-rounded" src="./Assets/Images/dazedduck.gif">
+        <img class="hero-logo2 is-rounded" src="./Assets/Images/cosmicduck.gif">
+        <img class="hero-logo3 is-rounded" src="./Assets/Images/fcosmicduck (1).gif">
+      </figure>
       </figure>
       </div>
     </div>
@@ -31,19 +35,20 @@
       <section class="section has-background-light">
           <div class="container2">
              <div class="columns">
-                <div class="column">
-                    <div class="notification is-dark">
+                <div class="column is-one-quarter">
+                    <div class="notification is-danger">
                       <h2 class="title"></h2>
                       <p class="is-size-4">
                      Quick Search:
-                     <div class="field has-addons">
+                     <div class="field has-addon">
                       <div class="control">
                         <input class="input" type="text" id = "searchInput" placeholder="enter your keywords">
                       </div>
                       <div class="control">
-                        <a class="button is-info" id = "search-btn">
+                        <a class="button is-small is-rounded is-info" id = "search-btn">
                           Search
                         </a>
+                        <button id= "clear-btn" class="button is-small is-warning is-dark">Clear History</button>
                       </div>
                     </div>
                   </p>
@@ -51,11 +56,11 @@
                     </div>
                     </div>
                   </div>
-                  <div class="column">
+                  <div class="column is-half">
                       <div class="notification is-primary">
 
                         <p class="is-size-4">YouTube Videos</p>
-                          <figure class="is-16by9" id="youtube-video">
+                          <figure class="videowindow" id="youtube-video">
                             
                           </figure>
                       </div>
