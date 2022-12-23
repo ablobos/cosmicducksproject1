@@ -1,13 +1,8 @@
+// Below are our global varibles
 const APIKEY = 'AIzaSyCGt6hDWBgYbjPW9h_jdA7i9c6iHsjiLYA';
 const youtubeAPI = 'https://www.googleapis.com/youtube/v3/search?key='; // The "/search" is what specifies that I want to search for a video
 
 let youtubeDisplay = document.getElementById('youtube-video');
-// let videoID = "PUT YOUTUBE VIDEO ID HERE";
-// let videoPlayer = `
-//             <iframe width="420" height="345" src="https://www.youtube.com/embed/${videoID}
-//             ">
-//             </iframe>`;
-
 
 
 $('#search-btn').on("click", function (event) { 
@@ -34,29 +29,14 @@ var getYouTube = function () {
 };
 
 
-// function displayVideos(data) {
-//     for (let i = 0; i < data.items.length; i++) {
-//         const videoIDLoop = data.items[i].id.videoId;
-//         console.log(videoIDLoop);
-//         youtubeDisplay.innerHTML += `<iframe width="420" height="345" src="https://www.youtube.com/embed/${videoIDLoop}"></iframe>`;
-//     }
-// }
-
-//I need to have the previous vidoes clear out by clearing the innerHTML? 
-
-// function displayVideos(data) {
-//     for (let i = 0; i < data.items.length; i++) {
-//         const videoIDLoop = data.items[i].id.videoId;
-//         console.log(videoIDLoop);
-//         let newVideo = document.createElement("iframe");
-//         newVideo.width="420";
-//         newVideo.height="345";
-//         newVideo.setAttribute("src", `https://www.youtube.com/embed/${videoIDLoop}`);
-//         document.youtubeDisplay.appendChild(newVideo);
-//     }
-// }
-
-
+function displayVideos(data) {
+    youtubeDisplay.innerHTML = '';
+    for (let i = 0; i < data.items.length; i++) {
+        const videoIDLoop = data.items[i].id.videoId;
+        console.log(videoIDLoop);
+        youtubeDisplay.innerHTML += `<iframe width="420" height="345" class="" src="https://www.youtube.com/embed/${videoIDLoop}"></iframe>`;
+    }
+}
 
 var getWikiInfo = function () {
     var wikiURL = 'https://en.wikipedia.org/w/rest.php/v1/search/page?q=' + searchTerm + '&limit=1';
@@ -64,7 +44,7 @@ var getWikiInfo = function () {
         .then(function (response) {
             return response.json();
         }).then(function (data) {
-            // console.log(data);
+            //console.log(data);
             //console.log(data.pages[0].excerpt);
             putWikiOnPage(data.pages[0]);
         }).catch(function (error) {
