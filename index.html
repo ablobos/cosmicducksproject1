@@ -21,18 +21,18 @@
 <section class="hero is-small has-background-black">
 	<div class="hero-body">
     <div class="container1">
-      <figure class="image is-128x128">
+      <figure id="banner" class="image is-128x128">
         <h1 class="team">The Cosmic Ducks Presents:</h1> 
         <img class= "hero-logo is-rounded" src="./Assets/Images/dazedduck.gif">
       </figure>
       </div>
     </div>
 </section>
-      <section class="section ">
+      <section class="section has-background-light">
           <div class="container2">
              <div class="columns">
                 <div class="column">
-                    <div class="notification is-danger">
+                    <div class="notification is-dark">
                       <h2 class="title"></h2>
                       <p class="is-size-4">
                      Quick Search:
@@ -48,11 +48,19 @@
                     </div>
                   </p>
                   <!-- this is where I am putting history buttons for now, not styled at all -->
-                    <div id = "search-history-box">  </div>
+                  <div class="select">
+                    <select class="is-focused">
+                      <option>Select From Your History</option>
+                      <option>With options</option>
+                    </select>
+                  </div>
+                    <div id = "search-history-box">  
+                    </div>
                     </div>
                   </div>
                   <div class="column">
                       <div class="notification is-primary">
+
                         <p class="is-size-4">YouTube Videos</p>
                           <figure class="is-16by9" id="youtube-video">
                             
