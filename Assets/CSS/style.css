@@ -9,6 +9,12 @@ border: 3px solid whitesmoke;
 padding: 3px;
 margin: 2px;
 }
+#wiki-icon {
+    height: auto;
+    max-width: 85px;
+    width: 100px;
+}
+
 
 #banner {
     display: flex;
@@ -28,3 +34,4 @@ margin: 2px;
     max-height: 500px;
     overflow: scroll;
 }
+

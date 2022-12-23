@@ -47,6 +47,7 @@ var getWikiInfo = function () {
         }).then(function (data) {
             //console.log(data);
             //console.log(data.pages[0].excerpt);
+            console.log(data[0]);
             putWikiOnPage(data.pages[0]);
         }).catch(function (error) {
             console.log(error);
@@ -109,7 +110,7 @@ var displayPastSearches = function () {
             histbtn.type = "submit";
             histbtn.name = "search-history-btn";
             histbtn.innerHTML = storedSearches[i];
-            histbtn.setAttribute("class", "history-btns");
+            histbtn.setAttribute("class", "history-btns button is-rounded is-outlined is-link");
             histbtn.setAttribute("id", `hist-btn-${[i]}`);
             $("#search-history-box").append(histbtn);
         }
