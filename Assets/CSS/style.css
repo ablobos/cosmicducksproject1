@@ -23,3 +23,8 @@ margin: 2px;
 #banner h1 {
     margin: 2 0 0 ;
 }
+
+#youtube-video {
+    max-height: 500px;
+    overflow: scroll;
+}
