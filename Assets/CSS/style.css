@@ -1,4 +1,3 @@
-
 .team {
 text-align: center;
 justify-content: space-around;
@@ -9,12 +8,18 @@ border: 3px solid whitesmoke;
 padding: 3px;
 margin: 2px;
 }
+
+.center {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+
 #wiki-icon {
     height: auto;
     max-width: 85px;
     width: 100px;
 }
-
 
 #banner {
     display: flex;
