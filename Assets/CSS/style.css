@@ -8,6 +8,7 @@ section {
 .hero-body {
     background: url(/Assets/Images/outerspace.gif);
 }
+
 .team {
 text-align: justify;
 justify-content: space-around;
@@ -44,12 +45,17 @@ z-index:auto;
     opacity: .5;
 }
 
+.center {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+
 #wiki-icon {
     height: auto;
     max-width: 85px;
     width: 100px;
 }
-
 
 #banner {
     position: relative;

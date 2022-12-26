@@ -1,7 +1,6 @@
 // Below are our global varibles
 const APIKEY = 'AIzaSyCGt6hDWBgYbjPW9h_jdA7i9c6iHsjiLYA';
-const youtubeAPI = 'https://www.googleapis.com/youtube/v3/search?key='; // The "/search" is what specifies that I want to search for a video
-
+const youtubeAPI = 'https://www.googleapis.com/youtube/v3/search?maxResults=5&key='; // The "/search" is what specifies that I want to search for a video
 let youtubeDisplay = document.getElementById('youtube-video');
 
 
@@ -84,7 +83,7 @@ var putWikiOnPage = function (data) {
 
 }
 
-//this function stores the current searchTerm in an array of storedSearches, and sets storedSearches up in local storage so that past searches are saved in the user's browser
+//This function stores the current searchTerm in an array of storedSearches, and sets storedSearches up in local storage so that past searches are saved in the user's browser
 var storePastSearches = function (searchTerm) {
     storedSearches = JSON.parse(localStorage.getItem("pastSearches"));
     if (storedSearches !== null) {
