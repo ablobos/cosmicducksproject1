@@ -2,32 +2,39 @@ html, body {
     min-height: 100%;
 }
 
+section {
+
+}
 .hero-body {
     background: url(/Assets/Images/outerspace.gif);
 }
 .team {
-text-align: center;
+text-align: justify;
 justify-content: space-around;
 color: rgb(243, 74, 235);
 background-color: rgb(12, 11, 11);
 border-radius: 10px;
 border: 3px solid whitesmoke;
-padding: 3px;
-margin: 10px;
-width: 100px;
+padding: 5px;
+margin: 5px;
+width: 90px;
+z-index:auto;
 }
 
 .container1 {
     margin-left: 160px;
 }
+
 #search-btn {
     border-radius: 5px;
     justify-content: space-around;
+    margin-top: 10px;
 }
 
 #clear-btn {
     border-radius: 5px;
     justify-content: space-around;
+    margin-top: 10px;
 }
 
 .galaxy {
@@ -58,6 +65,9 @@ width: 100px;
     padding: 5px;
 }
 
+#search-history-box {
+    overflow: hidden;
+}
 #youtube-video {
     justify-content: space-evenly;
     object-fit: cover;
@@ -65,7 +75,7 @@ width: 100px;
 }
 
 .card-content {
-    overflow: scroll;
+    overflow:auto;
 }
 
 
