@@ -14,6 +14,10 @@ To visit our site, visit this URL: https://crystal-coding-time.github.io/supreme
 
 To use the application, enter the topic you'd like to learn about in the search bar and hit the "Search" button.  You will be presented with relevant educational YouTube videos to watch, as well as a brief description of the topic from Wikipedia.  You can follow the Wikipedia link to learn more about the topic you chose to explore.  You can then search other topics that interest you, and return to past searches by clicking the buttons below the search bar which capture your search history.  To clear your search history from the page, you can click the "Clear History" button to the right of the "Search" button.
 
+
+!!!!INSERT GIF OF APP HERE!!!!
+
+
 ## Credits
 
 This project was a collaboration between: Eli Ter Keurst (GitHub: crystal-coding-time), Abdiel "A.B." Villalobos (GitHub: ablobos), and Aviva Rubenstein (GitHub: AvivaRubenstein).
