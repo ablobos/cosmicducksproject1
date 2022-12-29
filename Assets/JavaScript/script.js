@@ -14,6 +14,17 @@ $('#search-btn').on("click", function (event) {
     displayPastSearches();
 });
 
+$(`#clear-btn`).on("click", function (event){
+    storedSearches = JSON.parse(localStorage.getItem("pastSearches"));
+    if (storedSearches !== null) {
+        localStorage.clear();
+        //if there is existing search history, we remove each of the history buttons displayed on the page
+        var oldBtns = $(".history-btns");
+        for (i=0; i < oldBtns.length; i++) {
+            oldBtns.remove();
+        }}
+
+});
 
 var getYouTube = function () {
     let searchYouTube = youtubeAPI + APIKEY +'&part=snippet&videoCategoryId=27&type=video&q=' + searchTerm;
