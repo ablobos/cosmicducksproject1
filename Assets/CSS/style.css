@@ -1,3 +1,4 @@
+
 html, body {
     min-height: 100%;
 }
@@ -29,27 +30,30 @@ z-index:auto;
 #search-btn {
     border-radius: 5px;
     justify-content: space-around;
-    margin-top: 10px;
+    margin: 5px;
+    width: 80px;
 }
 
 #clear-btn {
     border-radius: 5px;
     justify-content: space-around;
-    margin-top: 10px;
+    padding: 5px;
+    margin: 5px;
 }
 
 .galaxy {
     max-width: 100vw;
     height: 250px;
     object-fit: cover;
-    opacity: .5;
+    opacity: .8;
 }
 
 .center {
     display: block;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-  }
+}
+
 
 #wiki-icon {
     height: auto;
@@ -69,6 +73,7 @@ z-index:auto;
     width: 128px;
     margin: 2px;
     padding: 5px;
+    justify-content: space-between;
 }
 
 #search-history-box {
@@ -79,6 +84,9 @@ z-index:auto;
     object-fit: cover;
     overflow-y: scroll;
 }
+
+.history-btns {
+    justify-content: space-between;
 
 .card-content {
     overflow:auto;
