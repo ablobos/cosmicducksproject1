@@ -88,6 +88,8 @@ z-index:auto;
 .history-btns {
     justify-content: space-between;
 
+}
+    
 .card-content {
     overflow:auto;
 }
