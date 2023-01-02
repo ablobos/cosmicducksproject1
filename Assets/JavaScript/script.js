@@ -120,7 +120,7 @@ var displayPastSearches = function () {
             histbtn.type = "submit";
             histbtn.name = "search-history-btn";
             histbtn.innerHTML = storedSearches[i];
-            histbtn.setAttribute("class", "history-btns button is-dark is-outlined is-rounded is-inverted");
+            histbtn.setAttribute("class", "history-btns button has-text-warning has-background-black is-outlined is-rounded is-inverted");
             histbtn.setAttribute("id", `hist-btn-${[i]}`);
             $("#search-history-box").append(histbtn);
         }

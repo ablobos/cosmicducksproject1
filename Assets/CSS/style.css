@@ -6,13 +6,12 @@ html, body {
 
 .hero-body {
     background-image: url(/Assets/Images/outerspace.gif);
-    background-repeat: repeat;
     background-size: contain;
-    opacity: .9;
+    opacity: .8;
 }
 
 .container2 {
-    background-image: url(/Assets/Images/neon.jpg);
+    background-image: url(/Assets/Images/futuristicback.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     opacity: .8;
@@ -20,7 +19,7 @@ html, body {
 
 .container1 {
     margin-left: 750px;
-    justify-content: center;
+    align-items: center;
 }
 
 .team-logo {
