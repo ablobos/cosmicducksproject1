@@ -3,11 +3,17 @@ html, body {
     min-height: 100%;
 }
 
-section {
 
-}
 .hero-body {
-    background: url(/Assets/Images/outerspace.gif);
+    background-image: url(/Assets/Images/outerspace.gif);
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+.container2 {
+    background-image: url(/Assets/Images/neon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .team {
