@@ -5,13 +5,13 @@ html, body {
 
 
 .hero-body {
-    background-image: url(/Assets/Images/outerspace.gif);
+    background-image: url(../Images/outerspace.gif);
     background-size: contain;
     opacity: .8;
 }
 
 .container2 {
-    background-image: url(/Assets/Images/futuristicback.jpg);
+    background-image: url(../Images/futuristicback.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     opacity: .8;
